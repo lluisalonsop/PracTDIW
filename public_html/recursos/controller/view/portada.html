@@ -11,7 +11,7 @@
 
 <body>
     <div id="container">
-        <header id="toppest">
+        <header id="toppest" style="grid-area: top">
             <div style = "grid-area: pic;">
             <img src="./img/logo.jpg" width="100px" /></a>
             </div>
@@ -79,44 +79,6 @@
             <li>Producte</li>
         </section>
 
-        <section style="grid-area: registre">
-            <div id="formu">
-            <header style="grid-area: top;" class="fancy">
-                <h2>Registra't: </h2>
-            </header>
-
-            
-                <section style="grid-area: fleft">
-                <p>
-                    Nom: <br />
-                    Adreça de correu electrònic: <br />
-                    Password: <br />
-                    Adreça: <br />
-                    Població: <br />
-                    Codi Postal: <br />
-                </p>
-                </section>
-                <section style="grid-area: fright">
-                    <form method="post" action="" onsubmit="return confirmaRegistre();">
-                    
-                    <input type="text" name="nom" /><br />
-                    <input type="text" name="correu" /><br />
-                    <input type="password" name="clau" /><br />
-                    <input type="text" name="adreca" /><br />
-                    <input type="text" name="poblacio" /><br />
-                    <input type="text" name="codi_postal" /><br />
-                
-
-                    <br /><br />
-
-
-                    <input type="submit" value="Registrar-me" />
-                </section>
-                </form>
-            </div>
-        </section>
-
-
         <footer id = "container" style = "grid-area: lowest;">
             <img src="img/campus-e.png" width="100px" />
             <p>&copy;Universitat Autònoma de Barcelona. Campus d'Excel·lència</p>
@@ -126,4 +88,3 @@
 
 </body>
 </html>
-Tecnologies de desenvolupament per a Internet i web 2021/202
