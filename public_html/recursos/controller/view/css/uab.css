@@ -49,3 +49,10 @@ h1,h2,h3{
 }
 
 
+/* MOSTRAR CATEGORIES */
+#categories{
+    display: grid;
+    grid-column-gap: px;
+    grid-template-areas: 
+    'retro natural vintage other';
+}
