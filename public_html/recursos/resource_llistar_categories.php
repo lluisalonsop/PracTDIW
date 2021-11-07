@@ -6,7 +6,7 @@
 <body>
 
 	<div class="llista">
-		<?php require __DIR__.'../controller/llistar_categories.php'; ?>
+		<?php require __DIR__.'./controller/llistar_categories.php'; ?>
 	</div>
 </body>
 </html>
