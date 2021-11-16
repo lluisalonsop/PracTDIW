@@ -1,2 +1,3 @@
 correo:
 aaron.blanco@uab.cat
+compressio gzip
