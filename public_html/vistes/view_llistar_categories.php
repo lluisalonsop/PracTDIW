@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title> Market For Tokens </title>
     <link rel="stylesheet" type="text/css" href="/public_html/recursosnew/css/uab.css">
-    <script src="js/funcions.js"></script>
+    <script src="../recursosnew/js/llistarcategories.js"></script>
 
 
 </head>
@@ -35,7 +35,7 @@
             <?php foreach($res as $categ){ ?>
                 <div style="<?php echo $categ["ID"]; ?>">
                     <a> <img src="<?php echo $categ["Foto"]; ?>" /></a>
-                    <h4><?php echo $categ["Nombre"]?></h4>
+                    <h4><?php echo $categ["Nombre"]?> onclick="ajaxllistproducts(<?php echo $categ["ID"];?>)"</h4>
                 </div>
             <?php }?>
         </div>
