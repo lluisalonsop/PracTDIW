@@ -1,8 +1,9 @@
 <?php
-function consultaResultats($connexio){
+function consultaResultats($connexio, $categoria){
   try{
     $sql = "SELECT p.Nombre, p.Foto, p.Precio  
-      FROM  productos p";
+      FROM  productos p
+      WHERE p.Categoria_ID = $categoria";
     $consulta = $connexio->prepare($sql);
     $consulta->execute();
     $resultat_productes_simple = $consulta->fetchAll(PDO::FETCH_ASSOC);
