@@ -37,7 +37,7 @@
             	foreach($res as $categ){ ?>
                 	<div style="<?php echo $categ["ID"]; ?>">
                     		<a> <img src="<?php echo $categ["Foto"]; ?>" /></a> 
-                    		<p id="<?php echo $categ["ID"]; ?>" onclick="myFunction(<?php echo $categ["ID"]; ?>)"> <?php echo $categ["Nombre"]?></p>
+                    		<p id="<?php echo $categ["ID"]; ?>" onclick="MostrarProductes(<?php echo $categ["ID"]; ?>)"> <?php echo $categ["Nombre"]?></p>
                 	</div>
             <?php }?>
         </div>
@@ -45,4 +45,4 @@
     <div id="replace" > </div> 
 </body>
 </html>
-Tecnologies de desenvolupament per a Internet i web 2021/202
+Tecnologies de desenvolupament per a Internet i web 2021/2022
