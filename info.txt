@@ -1,3 +1,30 @@
 correo:
 aaron.blanco@uab.cat
 compressio gzip
+
+Sessió 5:
+html entity filtratge de dades
+ex:
+$text = htmlentities($text, Entquotes ....)
+
+validació banda servidor
+
+filter_var($dada, FILTER_VALIDATE_TIPUS)
+
+SESSIONS:
+session_start(), --> AL PRINCIPI!!!
+
+variable global: $_SESSION['diccvalue'] = 'valor'
+
+Destruir sessi:
+session_destroy(); or for individual value --> unset($_SESSION['diccvalue'])
+
+Cistella: 
+ Matriu, dins sessió :
+
+	$_SESSION['cistella'] = array();
+	$_SESSION['cistella']['items'] = array();
+	$_SESSION['cistella']['items'][0];
+	$_SESSION['cistella']['items'][0]['id_producto']
+	$_SESSION['cistella']['items'][0]['cuatntitat_producte]
+	... etc
