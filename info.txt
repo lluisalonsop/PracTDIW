@@ -2,25 +2,25 @@ correo:
 aaron.blanco@uab.cat
 compressio gzip
 
-Sessió 5:
-html entity filtratge de dades
-ex:
-$text = htmlentities($text, Entquotes ....)
+	Sessió 5:
+	html entity filtratge de dades
+	ex:
+	$text = htmlentities($text, Entquotes ....)
 
-validació banda servidor
+	validació banda servidor
 
-filter_var($dada, FILTER_VALIDATE_TIPUS)
+	filter_var($dada, FILTER_VALIDATE_TIPUS)
 
-SESSIONS:
-session_start(), --> AL PRINCIPI!!!
+	SESSIONS:
+	session_start(), --> AL PRINCIPI!!!
 
-variable global: $_SESSION['diccvalue'] = 'valor'
+	variable global: $_SESSION['diccvalue'] = 'valor'
 
-Destruir sessi:
-session_destroy(); or for individual value --> unset($_SESSION['diccvalue'])
+	Destruir sessi:
+	session_destroy(); or for individual value --> unset($_SESSION['diccvalue'])
 
-Cistella: 
- Matriu, dins sessió :
+	Cistella: 
+ 	Matriu, dins sessió :
 
 	$_SESSION['cistella'] = array();
 	$_SESSION['cistella']['items'] = array();
@@ -28,3 +28,48 @@ Cistella:
 	$_SESSION['cistella']['items'][0]['id_producto']
 	$_SESSION['cistella']['items'][0]['cuatntitat_producte]
 	... etc
+
+6A SESSIO:
+Obligatori:
+	-Pagina confirmació comanda
+	Una vegada confirmat comanda:
+		Desar compra a la base de dades (informació usuari, data, etc.)
+	
+	-Sistema d'usuaris:
+		En el meu compte: edició del perfil amb pujada de fitxers:
+		(CAMPS EMPLENATS) VALUE=EL VALOR DEL CAMP DE LA BASE DE DADES
+		INSERIR IMATGE DE L'USUARI (pujada a base de dades i servidor)
+		
+		Llistat de comandes del usuari:
+			(consultes sql)
+
+	-A la pagina del cabás un botó que permeti esborrar el cabás de la compra.
+
+OPCIONAL:
+	CERCADOR DE PRODUCTES en la web
+	AFEGIR UN NUMERO DE PRODUCTE EN EL CABAS AMB UN MÉS
+	
+
+
+pujada a base de dades:
+	un form amb un enctype (per enviar un arxiu binari).
+	dintre del form: un <input type="file" id ="" name="">
+	
+	En nivell de controlador: (S'ha de moure l'arxiu temporal que estara en l'apatxe, pero el guardarem al directory)
+		com es fa:
+	s'ha de definir en un define php:
+	<?php
+	define('UPLOADS_FULL_PATH','/home/TDIW/tdiw-.....');
+	<?		
+	if(!empty($_FILES['image'] && !empty($_FILES['image']['name'])){
+	$imageName = basename($_FILES['image']['name']);
+	$imagePath = sprintf('%s%s', UPLOADS_FULL_PATH, $imageName);
+	
+	move_uploaded_file($_FILES['image']['tmp_name'], $imagePath);
+	actualitzar a la base de dades 
+
+	per fer redirecció header(). EL PROFE NO ES MUY FAN ??
+	SI HAS FET UN ECHO ABANS D'UN HEADER DONARA ERROR
+
+	//DONAR PERMISOS 755 PER PODER INSERIR IMATGES A LA CARPETA DE DESTÍ.
+}
