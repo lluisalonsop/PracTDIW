@@ -1,15 +1,24 @@
 <?php
-  function add_to_cart(){
-    $trobat = false;
-    for($i = 0; $i <  sizeof($_SESSIONS['cistella']['items'];$i++){
-    	if ($_SESSIONS['cistella']['items'][$i]['id_producto'] == $res){
-          	$_SESSIONS['cistella']['items'][$i] = $_SESSIONS['cistella']['items'][$i] + 1;
-          	$trobat = true;
-          	break;
-    	}
+  function add_to_cart($ID){
+    if(isset($_SESSION['cistella']))
+    {
+              if(isset($_SESSION['cistella']['items'][$ID]))
+              {
+                $_SESSION['cistella']['items'][$ID] = $_SESSION['cistella']['items'][$ID] + 1;
+                
+              }
+              else
+              {
+                $_SESSION['cistella']['items'][$ID] = 1;
+              }
     }
-    if ($trobat == false){
-    	$_SESSIONS['cistella']['items'][$i+1]['id_producto'] = $res;
+    else
+    {
+          $_SESSION['cistella'] = array();
+          $_SESSION['cistella']['items'] = array();
+          $_SESSION['cistella']['items'][$ID] = 1;
+          $_SESSION['cistella']['n_items'] = 0;
     }
-  }
+    $_SESSION['cistella']['n_items'] = $_SESSION['cistella']['n_items']+1;
+  }  
 ?>
