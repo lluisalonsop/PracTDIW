@@ -1,8 +1,6 @@
 <?php
  include __DIR__.'/../models/m_conecta_BD.php';
- include __DIR__.'/../models/m_retorna_producte_detall.php';
-
+ include __DIR__.'/../models/m_afegeix_cabas.php';
  $ID = $_POST['prod'];
- $conn = conectaBD();
- $res = consultaResultats($conn, $ID);
+ add_to_cart($ID);
 ?>
