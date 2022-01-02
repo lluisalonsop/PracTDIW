@@ -71,7 +71,7 @@
         <div id="navtab"style = "grid-area: navtab">   
         <form action="/public_html/index.php" method="get">
         <input type="submit" name="accio" value="llistar-categories"/> 
-        <input type="submit" name="accio" value="mostrar-producte"/>
+        <input type="submit" name="accio" value="Consulta-Pedidos"/>
         <input type="submit" name="accio" value="mostrar-cabas"/>   
         </form>
         </header>

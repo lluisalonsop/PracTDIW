@@ -49,6 +49,10 @@
  @include __DIR__.'/resources/resource_buida_cistella.php';
  break;
 
+ case 'Consulta-Pedidos':
+ @include __DIR__.'/resources/resource_consulta_pedidos.php';
+ break;
+
  case 'Sortir':
  @session_destroy();
  $_GET['accio'] = "default";
