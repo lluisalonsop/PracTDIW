@@ -45,6 +45,8 @@
     ?>
             <form action="/public_html/index.php" method="get">
             <input type="submit" name="accio" value="Confirmar"/>
+            <form action="/public_html/index.php" method="get">
+            <input type="submit" name="accio" value="Buidar"/>
         <footer style = "grid-area: lowest;">
             <img src="/public_html/recursosnew/img/campus-e.png" width="100px" />
             <p>&copy;Universitat Autònoma de Barcelona. Campus d'Excel·lència</p>

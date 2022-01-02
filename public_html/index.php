@@ -45,6 +45,10 @@
  include __DIR__.'/resources/resource_confirma_compra.php';
  break;
 
+ case 'Buidar':
+ @include __DIR__.'/resources/resource_buida_cistella.php';
+ break;
+
  case 'Sortir':
  @session_destroy();
  $_GET['accio'] = "default";
