@@ -64,62 +64,6 @@
         </form>
         </header>
 
-    
-        <section id ="Busca" style ="grid-area: mid">
-
-            <header>
-                <h3>Buscador:</h3>
-            </header>
-
-            <ul>
-                <li> Que busuqes?</li>
-                <input type="text" name="Buscador" /><br />
-                <ul>
-                    <li>CLASSIFICADOR:</li>
-                        <select name="Tipus">
-                            <option value="Imatge">Imagen</option>
-                            <option value="Imatge">Video</option>
-                            <option value="Imatge">Aplicacion</option>
-                            <option value="Imatge">Otros</option>
-                        </select>
-                    </ul>
-            </ul>
-
-
-
-        <input type="submit" value="Buscar" />
-        </section>
-
-
-        <section id = "nProd" style = "grid-area: low">
-
-            <header class="fancy">
-                <h3>Nous Productes:</h3>
-                <hr />
-            </header>
-
-            <li>Producte</li>
-            <li>Producte</li>
-            <li>Producte</li>
-            <li>Producte</li>
-            <li>Producte</li>
-        </section>
-
-
-        <section id = "topProd" style = "grid-area: low1">
-
-            <header class="fancy">
-                <h3>Productes populars:</h3>
-                <hr />
-            </header>
-
-            <li>Producte</li>
-            <li>Producte</li>
-            <li>Producte</li>
-            <li>Producte</li>
-            <li>Producte</li>
-        </section>
-
         <footer id = "container" style = "grid-area: lowest;">
             <img src="/public_html/recursosnew/img/campus-e.png" width="100px" />
             <p>&copy;Universitat Autònoma de Barcelona. Campus d'Excel·lència</p>

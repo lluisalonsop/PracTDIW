@@ -34,15 +34,15 @@
  break;
 
  case 'Afegeix_al_cabas':
- include __DIR__.'/resources/resource_afegeix_cabas.php';
+ @include __DIR__.'/resources/resource_afegeix_cabas.php';
  break;
  
  case 'mostrar-cabas':
- include __DIR__.'/resources/resource_mostrar_cabas.php';
+ @include __DIR__.'/resources/resource_mostrar_cabas.php';
  break;
  
  case 'Confirmar':
- include __DIR__.'/resources/resource_confirma_compra.php';
+ @include __DIR__.'/resources/resource_confirma_compra.php';
  break;
 
  case 'Buidar':
@@ -54,11 +54,11 @@
  break;
  
  case 'EditProfile':
- include __DIR__.'/resources/resource_editar_perfil.php';
+ @include __DIR__.'/resources/resource_editar_perfil.php';
  break;
  
  case 'Guardar':
- include __DIR__.'/resources/resource_guardar_perfil.php';
+ @include __DIR__.'/resources/resource_guardar_perfil.php';
  break;
  
  case 'Sortir':

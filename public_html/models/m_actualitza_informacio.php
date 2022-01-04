@@ -1,8 +1,7 @@
 <?php
 function actualitzaBD($conn,$values,$id){
-	$aux = getcwd();
-	echo "<script>console.log('".$aux."');</script>";
-	define('UPLOADS_FULL_PATH','/opt/lampp/htdocs/public_html/recursosnew/img/');
+	$aux = __DIR__.'/../recursosnew/img/';
+	define('UPLOADS_FULL_PATH',$aux);
 	$imagePath = sprintf('%s%s', UPLOADS_FULL_PATH,$id);
 	try {
 		$sql = "UPDATE usuarios SET Nombre='".$values["usuari"]."', Codigo_Postal='".$values['cpostal']."', Direccion='".$values['adreca']."', Correo_Electronico='".$values['correu']."', Poblacion='".$values['poblacio']."', IMG='".$imagePath."' WHERE ID=$id"; 

@@ -70,31 +70,36 @@
         if (session_id() == ''){
             session_start();
         }
-        @$ALL_ITEMS = $_SESSION['cistella']['items'];
-        if (@count($ALL_ITEMS) != 0){ 
-        	echo '<h2> Vosté te al cabas: </h2>';
-        	foreach($ALL_ITEMS as $numprod)
-        	{   
-            		$id = key($ALL_ITEMS);
-            		$resultats = consultaResultats($conn, $id);
-            		echo '<p> Producte:   '.$resultats[0]['Nombre'].' </p>';
-            		echo '<a> <img src="'.$resultats[0]['Foto'].'";/></a>';
-            	echo '<p> Descripcio: '.$resultats[0]['Descripcion'].'</p>';
-            	echo '<p> Preu: '.$resultats[0]['Precio'].'</p>';
-            	echo '<p> Total en el cabas : '.$_SESSION['cistella']['items'][$id].'</p>';
-            	echo '<br />';
-            	echo '<br />';
-            	next($ALL_ITEMS);
-        	}
-        	echo '<h2> Accions a fer: </h2>'; 
-        	echo '<form action="/public_html/index.php" method="get">';
-        	echo '<input type="submit" name="accio" value="Confirmar"/>';
-            	echo '<form action="/public_html/index.php" method="get">';
-            	echo '<input type="submit" name="accio" value="Buidar"/>';
-        }
-        else{
-        	echo '<h2> Vosté no te rés al cabas!!! </h2>';
-        }
+        if (isset($_SESSION['cistella']['items'])){
+        	$ALL_ITEMS = $_SESSION['cistella']['items'];
+	        if (count($ALL_ITEMS) != 0){ 
+	        	echo '<h2> Vosté te al cabas: </h2>';
+	        	foreach($ALL_ITEMS as $numprod)
+	        	{   
+	            		$id = key($ALL_ITEMS);
+	            		$resultats = consultaResultats($conn, $id);
+	            		echo '<p> Producte:   '.$resultats[0]['Nombre'].' </p>';
+	            		echo '<a> <img src="'.$resultats[0]['Foto'].'";/></a>';
+	            	echo '<p> Descripcio: '.$resultats[0]['Descripcion'].'</p>';
+	            	echo '<p> Preu: '.$resultats[0]['Precio'].'</p>';
+	            	echo '<p> Total en el cabas : '.$_SESSION['cistella']['items'][$id].'</p>';
+	            	echo '<br />';
+	            	echo '<br />';
+	            	next($ALL_ITEMS);
+	        	}
+	        	echo '<h2> Accions a fer: </h2>'; 
+	        	echo '<form action="/public_html/index.php" method="get">';
+	        	echo '<input type="submit" name="accio" value="Confirmar"/>';
+	            	echo '<form action="/public_html/index.php" method="get">';
+	            	echo '<input type="submit" name="accio" value="Buidar"/>';
+	        }
+	        else{
+	        	echo '<h2> Vosté no te rés al cabas!!! </h2>';
+	        }
+	    }
+	    else{
+			echo '<h2> Vosté no te rés al cabas!!! </h2>';
+	    }
    ?>
    	<br />
         <footer style = "grid-area: lowest;">
